@@ -175,7 +175,7 @@ function timeCheck(timePassed){
         }
 	}
 
-//Checks if the user is alive (does not include necessary steps to break out of current function
+//Checks if the user is alive (does not include necessary steps to break out of current function)
 function aliveCheck() {
         if (!alive) {
                 printGameOver("dead");   
@@ -228,6 +228,13 @@ function remItem(item){
 
 //Fight! NOT YET IMPLEMENTED
 function fight(enemy,enemyHP) {
+}
+
+//Time frame! If you spend 30 days on the island getting to the other island, you die of exhaustion
+function gameTime(nightCount, alive) {
+	if (nightCount === 30) {
+		alive = false;
+	}
 }
 
 //END OF DEFINING AREA
