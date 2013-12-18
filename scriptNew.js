@@ -21,22 +21,22 @@
         look around
         Your character surveys the area. Using this, you can find things you wouldn't normally see.
         
-        kill [ENTITY]
+        fight [ENTITY]
 		NOT YET IMPLEMENTED.
         
         quit
         Quits the game.
 		
-		move to [PLACE]
-		Moves your character to the specified PLACE. Only some areas are acessible from other areas.
+	move to [PLACE]
+	Moves your character to the specified PLACE. Only some areas are acessible from other areas.
         
         Types of objects:
         
         ITEM
         E.G agave plants are ITEMs. You can put them in your iventory, examine them, or drop them.
 		
-		WEAPON
-		Agave plants are also weapons...?
+	WEAPON
+	Agave plants are also weapons...?
         
         PLACE
         You can go inside these.
@@ -96,26 +96,26 @@ function moveToHome(){
 				//Else, does all the other checks to see what the user has typed.
                 switch(user){
                         case 'help':
-                                console.log(">Put your command in the prompt box. It could be anything, like loot [CONTAINER_NAME], examine [ITEM/PLACE_NAME], inv (short for inventory)[ITEM_NAME], or jump.");
-                                console.log(">There are four types of things. For an example, the agave plants are ITEMs; you can put them in your inventory. the cave is a PLACE; you can go inside it."); 
-                                console.log(">CONTAINERs are lootable. You can get vital items from inside them.");
-                                console.log(">ENTITYs are humans or animals. You can kill other ENTITYs.");
-                                console.log(">If you use look around, you can see where everything is.");
+                                console.log("Put your command in the prompt box. It could be anything, like loot [CONTAINER_NAME], examine [ITEM/PLACE_NAME], inv (short for inventory)[ITEM_NAME], or jump.");
+                                console.log("There are four types of things. For an example, the agave plants are ITEMs; you can put them in your inventory. the cave is a PLACE; you can go inside it."); 
+                                console.log("CONTAINERs are lootable. You can get vital items from inside them.");
+                                console.log("ENTITYs are humans or animals. You can kill other ENTITYs.");
+                                console.log("If you use look around, you can see where everything is.");
                         break;
                         case 'look around':
-                                console.log(">The agaves and the banana trees are everywhere, in the north (n) is the generator, the boat is in the southeast (se), and the cave is in the west (w)");
+                                console.log("The agaves and the banana trees are everywhere, in the north (n) is the generator, the boat is in the southeast (se), and the cave is in the west (w)");
                                 timeCheck();
                         break;
                         case 'jump':
-                                console.log(">You jump up for some reason you don't really know. You get some pretty nice air, and you see that there is an island right next to the one your on in the south.");
+                                console.log("You jump up for some reason you don't really know. You get some pretty nice air, and you see that there is an island right next to the one your on in the south.");
                                 timeCheck();
                         break;
                         case 'inv agave leaf':
                                 if (invCheck()) {
-                                        console.log(">Your pockets are full. You have to >drop [ITEM_NAME] before picking this item up");
+                                        console.log("Your pockets are full. You have to >drop [ITEM_NAME] before picking this item up");
                                 }
                                 else {
-                                        console.log(">You picked up a jagged agave leaf. This is a  weapon; However, it is only a 1/20 attack, not very good compared to a steel-tempered ulfberht.");
+                                        console.log("You picked up a jagged agave leaf. This is a  weapon; However, it is only a 1/20 attack, not very good compared to a steel-tempered ulfberht.");
                                         //Set hitpoints to 1, and set current weapon to agave leaf
 										atk = [1, "agave leaf"];
 										//Adds one to the time and checks it
@@ -144,7 +144,7 @@ function moveToHome(){
                         break;
                         default :
 							//If the user typed none of the above, logs "Misunderstood command."
-                                console.log(">Misunderstood command.");
+                                console.log("Misunderstood command.");
                 }
                 } 
         }
@@ -228,6 +228,7 @@ function remItem(item){
 
 //Fight! NOT YET IMPLEMENTED
 function fight(enemy,enemyHP) {
+	var attack=
 }
 
 //END OF DEFINING AREA
